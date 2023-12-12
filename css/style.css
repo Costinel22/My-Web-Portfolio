@@ -24,13 +24,14 @@
     
      :root {
         --taskbar: rgb(0, 0, 9);
-        --border-test: none;
+        --border-test: red solid 2px;
+        --border-img: rgb(1, 9, 1) solid 6px;
     }
     
     header {
         border: var(--border-test);
         padding: 16px;
-        background-color: #03202f;
+        background-color: var(--taskbar);
         color: #100000;
         position: sticky;
         width: 100%;
@@ -99,4 +100,87 @@
         height: 40px;
         width: fit-content;
         background-color: rgb(97, 118, 144);
+    }
+    
+    .page-wrapper {
+        border: var(--border-test);
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: min-content max-content min-content;
+        gap: 20px 20px;
+        grid-auto-flow: row;
+        grid-template-areas: "page-section" "page-section" "page-section-contact";
+    }
+    
+    .page-section {
+        border: var(--border-test);
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: min-content max-content;
+        grid-template-columns: 25% 75%;
+    }
+    
+    .page-section-contact {
+        border: var(--border-test);
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: min-content max-content;
+        grid-template-columns: 25% 75%;
+    }
+    
+    .page-wrapper h2 {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    section.grid {
+        border: var(--border-test);
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    img {
+        border: var(--border-test);
+        width: 100%;
+    }
+    
+    hr {
+        border: 1px solid #150b8c;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .col-left {
+        width: 25%;
+    }
+    
+    .col-medium {
+        width: 50%;
+    }
+    
+    .col-big,
+    .col-medium {
+        border: 10px solid rgb(4, 130, 126);
+        margin: 5px;
+    }
+    
+    #my-cont {
+        border: var(--border-test);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 50px;
+        color: rgb(96, 191, 208);
+        text-decoration: none;
+        background-color: var(--taskbar);
     }
