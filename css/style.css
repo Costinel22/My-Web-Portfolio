@@ -24,7 +24,7 @@
     
      :root {
         --taskbar: rgb(0, 0, 9);
-        --border-test: red solid 2px;
+        --border-test: ;
         --border-img: rgb(1, 9, 1) solid 6px;
     }
     
@@ -175,12 +175,14 @@
     #my-cont {
         border: var(--border-test);
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
-        padding-left: 50px;
-        color: rgb(96, 191, 208);
-        text-decoration: none;
         background-color: var(--taskbar);
+    }
+    
+    #my-cont a {
+        color: aliceblue;
+        padding-left: 50px;
+        text-decoration: none;
+        margin-right: 40px;
     }
