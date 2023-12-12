@@ -242,31 +242,10 @@
  
  @media only screen and (max-width: 800px) {
      /* For mobile phones: */
-     [class*=”page-wrapper”] {
-         width: 100%;
+     #categoryGrid {
+         width: 90%;
      }
      body {
-         Background-color: rgb(228, 227, 220);
-     }
- }
- 
- @media only screen and (max-width: 500px) {
-     body {
-         Background-color: lightgreen;
-         nav-left: left;
-     }
-     #page-wrapper {
-         nav-left: auto;
-     }
-     header {
-         nav-left: left;
-     }
- }
- 
- @supports (display: flex) {
-     @media screen and (min-width: 900px) {
-         #categoryGrid {
-             display: column;
-         }
+         Background-color: rgb(175, 208, 98);
      }
  }
