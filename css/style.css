@@ -212,7 +212,7 @@
  }
  
  #relax {
-     grid-area: apus;
+     grid-area: relax;
      background-image: url("../images/sunset.jpg");
  }
  
@@ -253,12 +253,20 @@
  @media only screen and (max-width: 500px) {
      body {
          Background-color: lightgreen;
-         nav-left: auto;
+         nav-left: left;
      }
-     #categoryGrid {
+     #page-wrapper {
          nav-left: auto;
      }
      header {
-         nav-left: auto;
+         nav-left: left;
+     }
+ }
+ 
+ @supports (display: flex) {
+     @media screen and (min-width: 900px) {
+         #categoryGrid {
+             display: column;
+         }
      }
  }
