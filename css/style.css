@@ -109,15 +109,23 @@
         grid-template-rows: min-content max-content min-content;
         gap: 20px 20px;
         grid-auto-flow: row;
-        grid-template-areas: "page-section" "page-section" "page-section-contact";
+        grid-template-areas: "about-me" "contents" "page-section-contact";
     }
     
-    .page-section {
+    .about-me {
         border: var(--border-test);
         display: grid;
         grid-auto-flow: column;
         grid-template-rows: min-content max-content;
         grid-template-columns: 25% 75%;
+    }
+    
+    .contents {
+        border: var(--border-test);
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: min-content max-content;
+        grid-template-columns: 2% 98%;
     }
     
     .page-section-contact {
@@ -134,7 +142,14 @@
         justify-content: center;
     }
     
-    section.grid {
+    #pic1 {
+        background-image: url("../images/fish.jpg");
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    /*section.grid {
         border: var(--border-test);
         display: grid;
         grid-template-columns: 25% 75%;
@@ -170,7 +185,7 @@
     .col-medium {
         border: 10px solid rgb(4, 130, 126);
         margin: 5px;
-    }
+    }*/
     
     #my-cont {
         border: var(--border-test);
@@ -185,4 +200,59 @@
         padding-left: 50px;
         text-decoration: none;
         margin-right: 40px;
+    }
+    
+    #categoryGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 800px 400px 400px;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas: "bookcases desks desks" "bookcases bedroom patio" "bookcases couches apus";
+    }
+    
+    #bookcases {
+        grid-area: bookcases;
+    }
+    
+    #bedroom {
+        grid-area: bedroom;
+        background-image: url("../images/masrum.jpg");
+    }
+    
+    #couches {
+        grid-area: couches;
+        background-image: url("../images/fish.jpg");
+    }
+    
+    #patio {
+        grid-area: patio;
+        background-image: url("../images/cactus.jpg");
+    }
+    
+    #desks {
+        grid-area: desks;
+        background-image: url("../images/peste.jpg");
+    }
+    
+    #apus {
+        grid-area: desks;
+        background-image: url("../images/oscar.jpg");
+    }
+    
+    .categoryGridArea {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 5px;
+        cursor: pointer;
+        display: grid;
+        align-content: end;
+    }
+    
+    .heading {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        height: 25px;
+        color: white;
+        font-size: 18px;
     }
